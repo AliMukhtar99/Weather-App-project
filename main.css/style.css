@@ -14,3 +14,38 @@
   height: 100%;
   overflow: hidden;
 }
+/* styling the search section */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 15px 15px;
+  margin-bottom: 40px;
+}
+/* styling the search-box */
+header input {
+  width: 100%;
+  max-width: 480px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  border-radius: 16px 0px 16px 0px;
+  background: none;
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  transition: 0.2s ease-out;
+  box-sizing: border-box;
+}
+
+header input:focus {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+header input:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+/* changing the color of the text in the placeholder */
+header input::placeholder {
+  color: #450920;
+}
