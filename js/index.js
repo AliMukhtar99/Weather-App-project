@@ -36,3 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const clearBtn = document.getElementById("clear-btn");
   clearBtn.addEventListener("click", clearInput);
+
+  const displayData = (weather) => {
+    // Returning a supplied numeric expression rounded to the nearest integer in °C and calling a function to showcase the day,month and year.
+    temp.innerHTML = `${Math.round(weather.main.temp)}°C`;
+    description.innerText = `${weather.weather[0].description}`;
+    city.innerText = `${weather.name}, ${weather.sys.country}`;
+    let now = new Date();
+    date.innerText = dateBuilder(now);
+  };
