@@ -24,3 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("button").click();
     }
   });
+
+  // making it possible for users to press the clear button and having their input cleared
+  const clearInput = () => {
+    const input = document.getElementsByTagName("input")[0];
+    input.value = "";
+    // const data = (document.querySelector("main").innerHTML = "");
+    location.reload();
+    reset();
+  };
+
+  const clearBtn = document.getElementById("clear-btn");
+  clearBtn.addEventListener("click", clearInput);
