@@ -6,3 +6,11 @@
   background-size: to bottom;
   font-family: "Caveat", cursive;
 }
+
+/* styling the body section */
+.body {
+  background: url(../img/ali.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
