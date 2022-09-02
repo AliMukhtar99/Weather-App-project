@@ -16,3 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
           .then(displayData)
           .catch((err) => alert("Please Enter Correct City Name"));
       });
+
+      // making it possible for a user to press the 'enter' key and get the weather results
+  inputvalue.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.querySelector("button").click();
+    }
+  });
