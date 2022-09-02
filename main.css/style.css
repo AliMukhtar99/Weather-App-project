@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+
 /* styling the whole background */
 * {
   margin: 0;
@@ -14,6 +15,7 @@
   height: 100%;
   overflow: hidden;
 }
+
 /* styling the search section */
 header {
   display: flex;
@@ -22,6 +24,7 @@ header {
   padding: 60px 15px 15px;
   margin-bottom: 40px;
 }
+
 /* styling the search-box */
 header input {
   width: 100%;
@@ -45,6 +48,7 @@ header input:focus {
 header input:hover {
   background-color: rgba(255, 255, 255, 1);
 }
+
 /* changing the color of the text in the placeholder */
 header input::placeholder {
   color: #450920;
@@ -67,6 +71,7 @@ button {
   transition: 0.4s;
   cursor: pointer;
 }
+
 /* styling the weather section  */
 main {
   flex-direction: column;
@@ -93,6 +98,7 @@ main {
   font-weight: 900;
   text-shadow: 1px 4px rgba(0, 0, 0, 0.5);
 }
+
 .current .temp span {
   font-weight: 600;
   font-size: medium;
