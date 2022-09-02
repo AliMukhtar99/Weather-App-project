@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(
       /* when the button is clicked it fetches data from the public API about the weather and then returns 
                 some input but if the location is invalid it will return an error message */
-      `https://api.openweathermap.org/data/2.5/weather?q=${inputvalue.value}&units=metric&appid=03a094de2fbed757402784c8ab602833`
+      `https://api.openweathermap.org/data/2.5/weather?q=${inputvalue.value}&units=metric&appid=********************************`
     )
       .then((response) => response.json())
       .then(displayData)
