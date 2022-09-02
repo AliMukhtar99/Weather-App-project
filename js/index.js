@@ -1,23 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let button = document.querySelector(".button");
-    let inputvalue = document.querySelector(".search-box");
-    let temp = document.querySelector(".current .temp");
-    let description = document.querySelector(".current .weather");
-    let city = document.querySelector(".location .city");
-    let date = document.querySelector(".location .date");
-    // adding some functionality to the search-button
-    button.addEventListener("click", function () {
-        fetch(
-          /* when the button is clicked it fetches data from the public API about the weather and then returns 
+  let button = document.querySelector(".button");
+  let inputvalue = document.querySelector(".search-box");
+  let temp = document.querySelector(".current .temp");
+  let description = document.querySelector(".current .weather");
+  let city = document.querySelector(".location .city");
+  let date = document.querySelector(".location .date");
+  // adding some functionality to the search-button
+  button.addEventListener("click", function () {
+    fetch(
+      /* when the button is clicked it fetches data from the public API about the weather and then returns 
           some input but if the location is invalid it will return an error message */
-          `https://api.openweathermap.org/data/2.5/weather?q=${inputvalue.value}&units=metric&appid=03a094de2fbed757402784c8ab602833`
-        )
-          .then((response) => response.json())
-          .then(displayData)
-          .catch((err) => alert("Please Enter Correct City Name"));
-      });
+      `https://api.openweathermap.org/data/2.5/weather?q=${inputvalue.value}&units=metric&appid=03a094de2fbed757402784c8ab602833`
+    )
+      .then((response) => response.json())
+      .then(displayData)
+      .catch((err) => alert("Please Enter Correct City Name"));
+  });
 
-      // making it possible for a user to press the 'enter' key and get the weather results
+  // making it possible for a user to press the 'enter' key and get the weather results
   inputvalue.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
@@ -45,3 +45,38 @@ document.addEventListener("DOMContentLoaded", () => {
     let now = new Date();
     date.innerText = dateBuilder(now);
   };
+
+  //  creating a function that will display the day,month and year
+  function dateBuilder(d) {
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+
+    return `${day} ${date} ${month} ${year}`;
+  }
+});
