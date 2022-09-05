@@ -20,3 +20,5 @@ I also had to write a function that would showcase the date, month, and year alo
 And we are finally done!! Go on, open it in the browser and see what it looks like
 
 That’s it! We now have a functioning weather app built with javascript! I learned a lot in this project. Most notably, how to work with APIs; to an extent. I know each API works differently than others but finally being exposed to one...I hope you enjoyed the read if you got this far.
+
+The live link for this website is https://alimukhtar99.github.io/Weather-App-project/
